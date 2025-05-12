@@ -13,9 +13,10 @@ We also merge ratings table with movies table and we fliter out users and movies
 2. **Training and Recommendation with Deep Learning plus Reinforcement Learning**
 The architecture below mirrors how humans actually choose movies - sometimes we follow sequences (watching a series), and sometimes we pick based on content (wanting another thriller). The two-model approach captures both behaviors 
 effectively.
-We use two models one normal lstm and ContentModel,
-TimeRatingAwareLSTM - Features selected are Movie IDs, Ratings, Time	-----> watching a series
-TimeRatingAwareContentModel - Features selected are Movie + Genre + Rating + Time -----> Wanting to see another related genre movie. 
+We use two deep learning models one normal lstm and other ContentModel,
+**TimeRatingAwareLSTM** - Features selected are Movie IDs, Ratings, Time	-----> watching a series
+**TimeRatingAwareContentModel** - Features selected are Movie + Genre + Rating + Time -----> Wanting to see another related genre movie.
+
  
    Movie + Genre + Rating + Timestamp - The special feature of the program is that it accounts all the important data points in a diverse way efficiently reducing GPU load.
    complete Input sequence for user no Xyz is
