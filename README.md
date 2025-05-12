@@ -1,6 +1,6 @@
 ## Movie-Recommendation-System-using-LSTM-and-Reinforcement-Learning 
 
-#data_preprocessing.py - 
+**Data Preprocessing - 
 This file handles loading, cleaning, and preparing the data for the recommendation system.
 Loads movie data ("Toy Story (1995), Adventure|Animation|Children|Comedy|Fantasy")
 Loads rating data (ex: "User 5 rated movie 17 as 4.0 on timestamp 944249077")
