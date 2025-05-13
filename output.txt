@@ -1,0 +1,58 @@
+Episode: 5/5, Avg Reward: 0.1458, Avg Loss: 0.0903, Epsilon: 0.98
+RL training history plot saved to rl_training_history.png
+
+Evaluating the model on test data...
+Hit Rate @10: 0.2727
+
+User 0's watchlist (showing the 10 most recent of 12 movies):
+1. Silence of the Lambs, The (1991) - Crime|Horror|Thriller (Rating: 3.0)
+2. Titanic (1997) - Drama|Romance (Rating: 3.0)
+3. Back to the Future (1985) - Adventure|Comedy|Sci-Fi (Rating: 5.0)
+4. Saving Private Ryan (1998) - Action|Drama|War (Rating: 3.0)
+5. Forrest Gump (1994) - Comedy|Drama|Romance|War (Rating: 2.0)
+6. Schindler's List (1993) - Drama|War (Rating: 3.0)
+7. Braveheart (1995) - Action|Drama|War (Rating: 3.0)
+8. Twelve Monkeys (a.k.a. 12 Monkeys) (1995) - Mystery|Sci-Fi|Thriller (Rating: 5.0)
+9. Star Wars: Episode VI - Return of the Jedi (1983) - Action|Adventure|Sci-Fi (Rating: 2.0)
+10. Star Wars: Episode IV - A New Hope (1977) - Action|Adventure|Sci-Fi (Rating: 5.0)
+
+Top 10 recommendations for user 0:
+1. Shawshank Redemption, The (1994) - Crime|Drama
+2. Sleepless in Seattle (1993) - Comedy|Drama|Romance
+3. Fugitive, The (1993) - Thriller
+4. Batman Forever (1995) - Action|Adventure|Comedy|Crime
+5. Lion King, The (1994) - Adventure|Animation|Children|Drama|Musical|IMAX
+6. Dumb & Dumber (Dumb and Dumber) (1994) - Adventure|Comedy
+7. Seven (a.k.a. Se7en) (1995) - Mystery|Thriller
+8. Independence Day (a.k.a. ID4) (1996) - Action|Adventure|Sci-Fi|Thriller
+9. Speed (1994) - Action|Romance|Thriller
+10. Pulp Fiction (1994) - Comedy|Crime|Drama|Thriller
+
+Recommendation explanations:
+- Shawshank Redemption, The (1994): Recommended because it's similar to Titanic (1997) (3.0/5), Schindler's List (1993) (2.0/5) you've watched before, particularly in Drama genres.
+- Sleepless in Seattle (1993): Recommended because it's similar to Titanic (1997) (3.0/5), Forrest Gump (1994) (2.0/5) you've watched before, particularly in Romance/Drama genres.
+- Fugitive, The (1993): Recommended because it's similar to Twelve Monkeys (a.k.a. 12 Monkeys) (1995) (5.0/5), Silence of the Lambs, The (1991) (3.0/5) you've watched before, particularly in Thriller genres.
+- Batman Forever (1995): Recommended because it's similar to Star Wars: Episode IV - A New Hope (1977) (5.0/5), Star Wars: Episode V - The Empire Strikes Back (1980) (5.0/5) you've watched before, particularly in Adventure/Action genres.
+- Lion King, The (1994): Recommended because it's similar to Star Wars: Episode IV - A New Hope (1977) (5.0/5), Star Wars: Episode V - The Empire Strikes Back (1980) (5.0/5) you've watched before, particularly in Adventure genres.
+- Dumb & Dumber (Dumb and Dumber) (1994): Recommended because it's similar to Back to the Future (1985) (3.0/5), Back to the Future (1985) (3.0/5) you've watched before, particularly in Adventure/Comedy genres.
+- Seven (a.k.a. Se7en) (1995): Recommended because it's similar to Twelve Monkeys (a.k.a. 12 Monkeys) (1995) (5.0/5), Silence of the Lambs, The (1991) (3.0/5) you've watched before, particularly in Thriller/Mystery genres.
+- Independence Day (a.k.a. ID4) (1996): Recommended because it's similar to Star Wars: Episode IV - A New Hope (1977) (5.0/5), Star Wars: Episode V - The Empire Strikes Back (1980) (5.0/5) you've watched before, particularly in Adventure/Action genres.
+- Speed (1994): Recommended because it's similar to Twelve Monkeys (a.k.a. 12 Monkeys) (1995) (5.0/5), Star Wars: Episode IV - A New Hope (1977) (5.0/5) you've watched before, particularly in Thriller/Action genres.
+- Pulp Fiction (1994): Recommended because it's similar to Silence of the Lambs, The (1991) (3.0/5), Silence of the Lambs, The (1991) (3.0/5) you've watched before, particularly in Thriller/Crime genres.
+
+User genre preferences:
+- Sci-Fi: 22.0% (Avg Rating: 4.7/5)
+- Action: 16.3% (Avg Rating: 4.1/5)
+- Adventure: 15.6% (Avg Rating: 4.6/5)
+- Drama: 10.7% (Avg Rating: 2.8/5)
+- War: 9.5% (Avg Rating: 2.7/5)
+
+Recommendation alignment with user preferences:
+- Sci-Fi: User preference 22.0%, Recommendations 3.2%, Difference -18.8%
+- War: User preference 9.5%, Recommendations 0.0%, Difference -9.5%
+- Thriller: User preference 7.6%, Recommendations 16.1%, Difference 8.5%
+- Crime: User preference 1.2%, Recommendations 9.7%, Difference 8.5%
+- Action: User preference 16.3%, Recommendations 9.7%, Difference -6.6%
+Models saved to saved_recommender_models/
+
+Enhanced movie recommendation system training and evaluation complete!
