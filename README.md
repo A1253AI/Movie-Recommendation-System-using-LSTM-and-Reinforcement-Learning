@@ -14,8 +14,10 @@ We also merge ratings table with movies table and we fliter out users and movies
 The architecture below mirrors how humans actually choose movies - sometimes we follow sequences (watching a series), and sometimes we pick based on content (wanting another thriller). The two-model approach captures both behaviors 
 effectively.
 We use two deep learning models one normal lstm and other ContentModel,
-**TimeRatingAwareLSTM** - Features selected are Movie IDs, Ratings, Time	-----> watching a series
-**TimeRatingAwareContentModel** - Features selected are Movie + Genre + Rating + Time -----> Wanting to see another related genre movie.
+**TimeRatingAwareLSTM** - Features selected are Movie IDs, Ratings, Time	-----> watching a series, here the focus is more on sequnetial information.
+**TimeRatingAwareContentModel** - Features selected are Movie + Genre + Rating + Time -----> Wanting to see another related genre movie, here the focus is more on content similarity.
+The content model includes Generes Features Integration such that it stores precomputed genre vectors for all movies which are fixed Genre assignments which results in identifying expilicit genre information. 
+
 
  
    Movie + Genre + Rating + Timestamp - The special feature of the program is that it accounts all the important data points in a diverse way efficiently reducing GPU load.
