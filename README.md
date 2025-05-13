@@ -53,23 +53,6 @@ Total: (0.4 * 0.0) + (0.3 * 0.4) + (0.3 * 0.75) = 0.345
 
 
  
-Movie + Genre + Rating + Timestamp - complete Input sequence for user no Xyz is
-Movie IDs: [8, 12, 45, 67, 72]
-Movie Genres:
-ID 8: [0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0] (Crime, Drama, Thriller)
-ID 12: [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0] (Action, Sci-Fi, Thriller)
-ID 45: [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0] (Action, Sci-Fi, Thriller)
-ID 67: [1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0] (Action, Fantasy, Sci-Fi, Thriller)
-ID 72: [0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0] (Adventure, Drama, Sci-Fi)
-Ratings: [0.75, 1.0, 0.625, 0.875, 1.0]
-Time Diffs: [30, 30, 25, 16.7, 8.3]
-Target: 98 (Blade Runner - Action, Sci-Fi, Thriller)
-Movie ID 8 (Pulp Fiction) ---> Encoded ID (12)  ---> Genre Vector --> [0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0] (Crime, Drama, Thriller)
 
-   Input Sequence: [8, 12, 45, 67, 72] (Pulp Fiction, Matrix, Terminator 2, Inception, Interstellar)
-   Movie Embedding: Similar to LSTM model, creates 64-dim vector for each movie
-   Each movie has a binary vector indicating which genres it belongs to.
 
-Output shape: [1, 5, 64]
-Movie ID 8 (Pulp Fiction) ---> Encoded ID (12)  ---> Genre Vector --> [0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0] (Crime, Drama, Thriller)
 
