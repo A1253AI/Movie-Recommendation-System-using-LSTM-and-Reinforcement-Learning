@@ -12,12 +12,12 @@ We also merge ratings table with movies table and we fliter out users and movies
 
 2. **Training and Recommendation with Deep Learning plus Reinforcement Learning:**
 The architecture below mirrors how humans actually choose movies - sometimes we follow sequences (watching a series), and sometimes we pick based on content (wanting another thriller). The two-model approach captures both behaviors 
-effectively.***  
-**We use two deep learning models one normal lstm and other ContentModel**,
-**TimeRatingAwareLSTM** - Features selected are Movie IDs, Ratings, Time	-----> watching a series, here the focus is more on sequnetial information.***
-**TimeRatingAwareContentModel** - Features selected are Movie + Genre + Rating + Time -----> Wanting to see another related genre movie, here the focus is more on content similarity.
-The content model includes Generes Features,Integration is such that it stores precomputed genre vectors for all movies which are fixed Genre assignments which results in identifying expilicit genre information.
-**DQN Model (Deep Q-Network):**
+effectively.
+**We use two deep learning models one normal lstm and other ContentModel**,  
+**TimeRatingAwareLSTM** - Features selected are Movie IDs, Ratings, Time	-----> watching a series, here the focus is more on sequnetial information.  
+**TimeRatingAwareContentModel** - Features selected are Movie + Genre + Rating + Time -----> Wanting to see another related genre movie, here the focus is more on content similarity.  
+The content model includes Generes Features,Integration is such that it stores precomputed genre vectors for all movies which are fixed Genre assignments which results in identifying expilicit genre information.  
+**DQN Model (Deep Q-Network):**  
 This model learns optimal recommendation strategies through reinforcement learning, here the input is combined features from both deep learning models LSTM and Content model.
 The goal is to supply a hybrid weighted input to the DQN system such that it takes combined features from both models and it should be able to learn optimal recommendation policy.
 We also use Genere similarity in reward calculation, if the recommended movie shares generes with the target movie, the agent gets a higher reward. 
