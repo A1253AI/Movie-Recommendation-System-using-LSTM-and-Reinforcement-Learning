@@ -8,21 +8,10 @@ Extracts Genre Features: for example it shows below how unique generes are colle
 Identifies unique genres: ["Action", "Adventure", "Comedy", ...etc ]
 Creates a binary matrix where each row represents a movie and each column a genre
 For "Toy Story": [0,1,0,1,1,1,0,...] (has Adventure, Animation, Children, Comedy, Fantasy). 
-We also merge ratings table with movies table and we fliter out users and movies with fewer ratings.  
-**General representation of Data preparation for LSTM:**  
+We also merge ratings table with movies table and we fliter out users and movies with fewer ratings.
+After merging the movies and rating tables we combine sequences for all users in sequence generated is per user.    
+**General representation of Data preparation for LSTM and Content Model:**  
 Movie + Genre + Rating + Timestamp - complete Input sequence for user no Xyz is, 
-Movie IDs: [8, 12, 45, 67, 72]  
-Movie Genres:  
-ID 8: [0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0] (Crime, Drama, Thriller)  
-ID 12: [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0] (Action, Sci-Fi, Thriller)  
-ID 45: [1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0] (Action, Sci-Fi, Thriller)  
-ID 67: [1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0] (Action, Fantasy, Sci-Fi, Thriller)  
-ID 72: [0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0] (Adventure, Drama, Sci-Fi)  
-Ratings: [0.75, 1.0, 0.625, 0.875, 1.0]  
-Time Diffs: [30, 30, 25, 16.7, 8.3]  
-Target: 98 (Blade Runner - Action, Sci-Fi, Thriller)  
-Movie ID 8 (Pulp Fiction) ---> Encoded ID (12)  ---> Genre Vector --> [0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0] (Crime, Drama, Thriller)  
-
 
 3. **Training and Recommendation with Deep Learning plus Reinforcement Learning:**
 The architecture below mirrors how humans actually choose movies - sometimes we follow sequences (watching a series), and sometimes we pick based on content (wanting another thriller). The two-model approach captures both behaviors 
@@ -45,7 +34,17 @@ Target: User actually watched "Gravity" (Sci-Fi/Drama/Thriller)
 Target reward: 0.0 (wrong movie)  
 Genre similarity: 0.8 * 0.5 = 0.4 (similar genres)  
 Rating reward: 0.75 (high average ratings)  
-Total: (0.4 * 0.0) + (0.3 * 0.4) + (0.3 * 0.75) = 0.345  
+Total: (0.4 * 0.0) + (0.3 * 0.4) + (0.3 * 0.75) = 0.345
+The integration of reinforcement learning allows the system to learn from implicit feedback of what user actaully watches rather than using just ratings making it more practical for real world.
+
+3.**Recommender class:**   
+The role of recommder class is to combine all the deep learning models like lstm, content model and rl agent (DQN) to set up optimizers and learning rate schedulers. It adds a fall back mechanism, if training data is insufficient, based on popularity of movie then it considers number of views for a particular movie. It also measures how often the actual next movie is in our top N-recommendation to calculate the hit rate. Every user has unique pattern that can be only learned through the user preference analysis, for eg, user A has watched recent movies more recently as compared to other ones, or highly-rated movies. It also tracks average rating per genre. This Recommender class helps us maintain reommendation quality against user prefernces and displays results in human understandable form.  
+
+4.**Training class:**  
+The file contains the training and evaluation procedures for the recommendation system. Initializes deep learning models with random weights and also adjust weights to improve prediction during back propagation.
+
+5.**Main class:** 
+This file orchestrates the entire process of training and evaluation of recommendation system.
 
 
 
