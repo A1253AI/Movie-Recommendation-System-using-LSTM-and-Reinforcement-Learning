@@ -9,9 +9,9 @@ Identifies unique genres: ["Action", "Adventure", "Comedy", ...etc ]
 Creates a binary matrix where each row represents a movie and each column a genre
 For "Toy Story": [0,1,0,1,1,1,0,...] (has Adventure, Animation, Children, Comedy, Fantasy). 
 We also merge ratings table with movies table and we fliter out users and movies with fewer ratings.
-After merging the movies and rating tables we combine sequences for all users in sequence generated is per user.    
+After merging the movies and rating tables we combine sequences for all users, sequence generated is per user.    
 **General representation of Data preparation for LSTM and Content Model:**  
-Movie + Genre + Rating + Timestamp - complete Input sequence for user no Xyz is, 
+Movie + **Genre** + Rating + Timestamp - complete Input sequence for user no Xyz is, 
 
 3. **Training and Recommendation with Deep Learning plus Reinforcement Learning:**
 The architecture below mirrors how humans actually choose movies - sometimes we follow sequences (watching a series), and sometimes we pick based on content (wanting another thriller). The two-model approach captures both behaviors 
