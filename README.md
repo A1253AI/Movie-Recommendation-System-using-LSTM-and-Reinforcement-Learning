@@ -37,13 +37,13 @@ Rating reward: 0.75 (high average ratings)
 Total: (0.4 * 0.0) + (0.3 * 0.4) + (0.3 * 0.75) = 0.345
 The integration of reinforcement learning allows the system to learn from implicit feedback of what user actaully watches rather than using just ratings making it more practical for real world.
 
-3.**Recommender class:**   
+3. **Recommender class:**   
 The role of recommder class is to combine all the deep learning models like lstm, content model and rl agent (DQN) to set up optimizers and learning rate schedulers. It adds a fall back mechanism, if training data is insufficient, based on popularity of movie then it considers number of views for a particular movie. It also measures how often the actual next movie is in our top N-recommendation to calculate the hit rate. Every user has unique pattern that can be only learned through the user preference analysis, for eg, user A has watched recent movies more recently as compared to other ones, or highly-rated movies. It also tracks average rating per genre. This Recommender class helps us maintain reommendation quality against user prefernces and displays results in human understandable form.  
 
-4.**Training class:**  
+4. **Training class:**  
 The file contains the training and evaluation procedures for the recommendation system. Initializes deep learning models with random weights and also adjust weights to improve prediction during back propagation.
 
-5.**Main class:** 
+5. **Main class:** 
 This file orchestrates the entire process of training and evaluation of recommendation system.
 
 
