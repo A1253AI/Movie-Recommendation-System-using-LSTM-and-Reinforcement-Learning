@@ -8,7 +8,7 @@ Extracts Genre Features: for example it shows below how unique generes are colle
 Identifies unique genres: ["Action", "Adventure", "Comedy", ...etc ]
 Creates a binary matrix where each row represents a movie and each column a genre
 For "Toy Story": [0,1,0,1,1,1,0,...] (has Adventure, Animation, Children, Comedy, Fantasy). 
-We also merge ratings table with movies table and we fliter out users and movies with fewer ratings.
+We also merge ratings table with movies table and we fliter out users and movies with fewer ratings.  
 **General representation of Data preparation for LSTM:**  
 Movie + Genre + Rating + Timestamp - complete Input sequence for user no Xyz is, 
 Movie IDs: [8, 12, 45, 67, 72]  
