@@ -27,7 +27,7 @@ We also use Genere similarity in reward calculation, if the recommended movie sh
 The DQN Agent class stores action, state,reward creating breaks correlation in sequential data and enabling batch learning from past experiences.  
 The node ---> State, generally it represents user's current viewing context. It states last n movies watched using deep learning combined lstm features in n-dimensional vector space representation.  
 The node ---> Action, represents which movie should be recommended.  
-The node ---> Reward, is calculated in a way, if the recommeded movie matches with what user actually watched next it is rewarded as 1 and 0 otherwise this criteria is weigheted 40% termed as Target Reward, Genre similarity reward termed as cosine similarity between recommeded and actual movies and it is weighhted 30%. Rating reward is calculated based on the average ratings of the movies in sequence higher ratings tends to higher reward.  
+The node ---> Reward, is calculated in a way, if the recommeded movie matches with what user actually watched next it is rewarded as 1 and 0 otherwise this criteria is weigheted 40% termed as Target Reward, Genre similarity reward termed as cosine similarity between recommeded and actual movies and it is weighhted 30%. Rating reward is calculated based on the average ratings of the movies in sequence, higher ratings tends to higher reward.  
 **For ex:**
 Action: Recommend "The Martian" (Sci-Fi/Drama)  
 Target: User actually watched "Gravity" (Sci-Fi/Drama/Thriller)  
